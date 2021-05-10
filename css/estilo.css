@@ -1,0 +1,23 @@
+/**/
+* {/*Ao utilizarmos o * indicamos que as alterações feitas aqui, afetaram todas as tags da página*/
+	box-sizing: border-box;/*O box-sizing ajuda a evitar problemas de conta quando formos trabalhar com margens*/
+}
+html, body{/*Aqui vamos alterar certas informações no html e no body ao mesmo tempo*/
+	margin: 0;/*Zeramos as margens, que a aquela área de distância externa do elemento*/
+	padding: 0;/*Zeramos o padding, que é aquela área de distância interna do elemento*/
+}
+
+header { /*Aqui vamos configurar o cabeçalho*/
+	width: 100%;/*O tamanho da largura*/
+	height:200px;/*O tamanho da altura*/
+	background: #ccc;/*Altera a cor*/
+	position: relative;/*Relative: Tem como ponto zero, para calcular o tamanho e distância do elemento, o canto superior esquerdo dele mesmo.*/
+}
+
+nav{/*Aqui vamos fazer as alterações na barra de navegação*/
+	width: 100%;
+	height: 100px;
+	background: #999;
+	position: absolute;/*Absolute: Tem como ponto zero o ponto superior esquerdo do elemento pai mais próximo que contenha também uma propriedade position relative ou absolute.*/
+	bottom: 0;/*Alteramos a margem de baixo para zero*/
+}
