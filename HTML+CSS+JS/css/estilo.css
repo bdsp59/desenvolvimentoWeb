@@ -1,4 +1,6 @@
-/**/
+/*
+Site para ver cores flats para utilizar no site: https://flatuicolors.com/ ou https://www.flatuicolorpicker.com/
+*/
 * {/*Ao utilizarmos o * indicamos que as alterações feitas aqui, afetaram todas as tags da página*/
 	box-sizing: border-box;/*O box-sizing ajuda a evitar problemas de conta quando formos trabalhar com margens*/
 }
@@ -20,4 +22,16 @@ nav{/*Aqui vamos fazer as alterações na barra de navegação*/
 	background: #999;
 	position: absolute;/*Absolute: Tem como ponto zero o ponto superior esquerdo do elemento pai mais próximo que contenha também uma propriedade position relative ou absolute.*/
 	bottom: 0;/*Alteramos a margem de baixo para zero*/
+}
+
+section{/*Aqui vamos fazer alterações na seção*/
+	width: 100%;
+	height: 500px;
+	background: #ffbe76;
+}
+
+footer{/*Aqui vamos fazer alterações na seção*/
+	width: 100%;
+	height: 100px;
+	background: #27ae60;
 }
