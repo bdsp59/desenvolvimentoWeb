@@ -10,12 +10,12 @@
 	<form method="POST" action="form.php">
 		<div class="form-group"><!--Cria uma divisão no site, separa um pedaço da página-->
 			<label for="nome">Nome</label><!--O label permite colocar uma descrição para esse campo-->
-			<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" required><!--O placeholder permite que será inserido um texto sugestivo ao usuário-->
+			<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" required autofocus tabindex="1" readonly><!--O placeholder permite que será inserido um texto sugestivo ao usuário. O atributo required serve para indicar que o esse campo deve ser preenchido pelo usuário. O atributo autofocus serve para indicar que essa tag deve estar selecionada quando carregar a página. O atributo tabindex serve para indicar a ordem que deve ser seguida ao se clickar no tab. O atributo readonly vai desabilitar o campo, mas vai permitir que o usuário copie os dados do campo.-->
 		</div>
 
 		<div class="form-group">
 			<label for="email">E-Mail</label>
-			<input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com.br" required>
+			<input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com.br" required tabindex="2" disabled><!--O atributo disabled serve para desabilitar um campo, ou seja, não será mais possível digitar naquele campo. Normalmente usamos o disabled em caso de autenticação, algo que o o usuário não deve alterar.-->
 		</div>
 
 		<div class="form-group">
@@ -53,7 +53,7 @@
 
 		<div class="form-group">
 			<label for="ano">Ano Fabricação</label>
-			<input type="number" name="ano" id="ano" min="1920" max="2021" value="2021" step="20" class="form-control"><!--O type igual a number serve para indicar que será um valor númerico que estará nesse dado e não pode ser de outro tipo. O atributo step serve para indicar de quanto em quanto deve-se passar os valores, como é 20 o valor vai aumentar e diminuir de 20 em 20(quando no automatico).-->
+			<input type="number" name="ano" id="ano" min="1920" max="2021" value="2021" step="20" class="form-control" tabindex="3"><!--O type igual a number serve para indicar que será um valor númerico que estará nesse dado e não pode ser de outro tipo. O atributo step serve para indicar de quanto em quanto deve-se passar os valores, como é 20 o valor vai aumentar e diminuir de 20 em 20(quando no automatico).-->
 		</div>
 
 		<div class="form-group">
@@ -102,6 +102,38 @@
 		</div>
 
 		<input type="hidden" name="id" value="1"><!--Aqui será definido um valor que deve ficar escondido, por isso usamos o type como hidden. E ele vai servir para passar um valor que deve ser oculto a pessoas externas. Muito usado em API.-->
+
+		<div class="form-group">
+			<label for="senha">Senha</label>
+			<input type="password" name="senha" id="senha" class="form-control"><!--O type ser igual ao password indica que o valor recebido será uma senha, ele já vai esconder os caracteres a medida que forem digitados.-->
+		</div>
+
+		<div class="form-group">
+			<label for="mes">Mês</label>
+			<input type="month" name="mes" id="mes" class="form-control"><!--O type ser igual a month indica que o que queremos é o mês e o ano, sendo assim apesar de exibir um calendario que nem o date, não importa o dia que se escolha ele apenas pega o mês e o ano.-->
+		</div>
+
+		<div class="form-group">
+			<label for="semana">Semana</label>
+			<input type="week" name="semana" id="semana" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<label for="hora">Hora</label>
+			<input type="time" name="hora" id="hora" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<input type="text" list="navegadores"><!--O list indica que vamos fazer referência a uma lista de informações, o nome da list deve ser igual ao nome do id do datalist para que possa fazer a referência corretamente-->
+			<datalist id="navegadores"><!--A tag datalist cria uma lista de sugestões, mas também aceita valores que não estejam na lista abaixo. Diferente da tag select nessa tag não precisamos fechar as tags option-->
+				<option value="Chrome">
+				<option value="Firefox">
+				<option value="Safari">
+				<option value="Edge">
+			</datalist>
+		</div>
+
+
 
 		<div>
 			<button class="btn btn-primary" type="submit">Cadastrar</button><!--O type tem que ser submit para garantir que o botão vai validar o que está no formulário-->
