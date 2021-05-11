@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Curso Completo de Desenvolvedor Web</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	
+	<form method="POST" action="form.php">
+		<div class="form-group"><!--Cria uma divisão no site, separa um pedaço da página-->
+			<label for="nome">Nome</label><!--O label permite colocar uma descrição para esse campo-->
+			<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" required><!--O placeholder permite que será inserido um texto sugestivo ao usuário-->
+		</div>
+
+		<div class="form-group">
+			<label for="email">E-Mail</label>
+			<input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com.br" required>
+		</div>
+
+		<div class="form-group">
+			<label for="nascimento">Nascimento</label>
+			<input type="date" name="nascimento" id="nascimento" class="form-control" required min="2021-05-01" max="2021-05-16"><!--Aqui usamos o tipo date para indicar que o formato é uma data e já configura o sistema para ser organizado no formato dd/mm/aaaa e permite acesso ao calendário para selecionar a data. O atributo min que serve para indicar a data mínima que o site pode aceitar. Também podemos ter um atributo max que serve para indicar a data máxima que o site pode aceitar.-->
+		</div>
+
+		<div class="form-group">
+			<label>Sexo</label>
+			<input type="radio" name="sexo" id="masculino"><!--O radio permite que seja criada uma lista de opções com os valores que podem ser selecionados para esse elemento, eles se agrupam pelo atributo name, então precisa que o valor desse atributo seja igual em todos aqueles que vão compor a lista de opções-->
+			<label for="masculino">Masculino</label>
+			<input type="radio" name="sexo" id="feminino">
+			<label for="feminino">Feminino</label>
+		</div>
+
+		<div class="form-group">
+			<label for="li">Li o contrato</label>
+			<input type="checkbox" name="li" id="li" required checked><!--O atributo checked serve para já trazer o checkbos marcado-->
+		</div>
+
+		<div class="form-group">
+			<label for="volume">Volume</label>
+			<input type="range" name="volume" id="volume" min="0" max="100" value="25"><!--O tipo range serve para controlar esse elemento como uma barra que se arrasta. O value indica o valor com qual se deve começar ao abrir o site-->
+		</div>
+
+		<div class="form-group">
+			<label for="meter">Bateria</label>
+			<meter name="meter" min="0" max="100" low="15" value="12">12</meter><!--A tag meter é mais usada para programação em dispositivos móveis, ele serve para criar uma bateria e mostrar como está a carga dela. O atributo low serve para indicar a partir de qual valor a bateria deve ser considerada baixa-->
+		</div>
+
+		<div class="form-group">
+			<label for="carregando">Carregando</label>
+			<progress value="60" min="0" max="100">60%</progress><!--A tag progress serve para criar uma barra de carregando que demostra a progressão a medida que vai carregando.-->
+		</div>
+
+		<div class="form-group">
+			<label for="ano">Ano Fabricação</label>
+			<input type="number" name="ano" id="ano" min="1920" max="2021" value="2021" step="20" class="form-control"><!--O type igual a number serve para indicar que será um valor númerico que estará nesse dado e não pode ser de outro tipo. O atributo step serve para indicar de quanto em quanto deve-se passar os valores, como é 20 o valor vai aumentar e diminuir de 20 em 20(quando no automatico).-->
+		</div>
+
+		<div class="form-group">
+			<label for="cor">Cor</label>
+			<input type="color" name="cor" id="cor" class="form-control"><!--O type ser igual a color indica que queremos que abra uma paleta de cores para escolher a cor que quisermos.-->
+		</div>
+
+		<div class="form-group">
+			<label for="url">URL</label>
+			<input type="url" name="url" id="url" class="form-control"><!--O type ser igual a url serve para indicar que receberá o valor de uma url e deve conferir se é válido o valor inserido-->
+		</div>
+
+		<div class="form-group">
+			<label for="search">Busca</label>
+			<input type="search" name="search" id="search" class="form-control"><!--O type ser igual a search indica que vai ser uma área de busca.-->
+		</div>
+
+		<div class="form-group">
+			<label for="mensagem">Mensagem</label>
+			<textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea><!--A tag textarea serve para criar uma caixa que vai receber um texto que vai precisar de mais de uma linha. É uma caixa de texto.-->
+		</div>
+
+		<div class="form-group">
+			<label for="estados">Estado</label>
+			<select name="estados" id="estados" multiple size="2"><!--A tag select vai criar uma lista de seleção com as opções que vão ser listadas abaixo, como options. O atributo multiple size serve para indicar a quantidade de opções que devem ser exibidos ao mesmo tempo.-->
+				<option value="SP">São Paulo</option><!--A tag option vai trazer os valores que podem ser usados-->
+				<option value="MG" selected>Minas Gerais</option><!--O atributo selected serve para indicar qual deve ser o valor inicial do select-->
+				<option value="RJ">Rio de Janeiro</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label for="estados">Estado</label>
+			<select name="estados" id="estados" multiple size="3">
+				<optgroup label="Sudeste"><!--Essa tag serve para agrupar os options em um grupo, criados por essa tag usando o label.-->
+					<option value="SP">São Paulo</option>
+					<option value="MG" selected>Minas Gerais</option>
+					<option value="RJ">Rio de Janeiro</option>
+				</optgroup>
+				<optgroup label="Sul">
+					<option value="PR">Paraná</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="RS">Rio Grande do Sul</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<input type="hidden" name="id" value="1"><!--Aqui será definido um valor que deve ficar escondido, por isso usamos o type como hidden. E ele vai servir para passar um valor que deve ser oculto a pessoas externas. Muito usado em API.-->
+
+		<div>
+			<button class="btn btn-primary" type="submit">Cadastrar</button><!--O type tem que ser submit para garantir que o botão vai validar o que está no formulário-->
+		</div>
+	</form>
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

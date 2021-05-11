@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Curso Completo de Desenvolvedor Web</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    
+    <form >
+    
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><!--A classe form-control já formata os dados para serem adequados aos formulários. O type quando recebe o valor e-mail já verifica se o e-mail é válido e só aceita valores assim. Se quisermos que esse campo seja obrigatório colocamos um atributo required ao input-->
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
+
+<!--
+<form action="contato.php" method="POST">
+  Essa tag serve para indicar que tudo que estiver dentro dela será enviada junto desse formulário. Quer dizer que vai ser um bloco único com todos os dados coletados e gerados pelo formulário. 
+  O atributo action faz com que os dados coletados no formulário sejam enviados ao lugar indicado. 
+  O atributo method indica de que modo será enviado os dados desse formulário, o padrão é que seja por GET (GET -> os campos de input são enviados na url, deixando visível os dados / POST -> Ele fica oculto a maioria dos usuários
+-->
