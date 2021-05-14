@@ -1,0 +1,346 @@
+@font-face{/*Usamos o font face para trazer uma fonte que desejamos utilizar na nossa página.*/
+	font-family: 'Open-sans-regular';/*Aqui vamos definir o nome com que vamos identificar essa fonte*/
+	src: url("../fonts/OpenSans/OpenSans-Regular.ttf");/*Aqui vamos dizer onde está essa fonte*/
+	font-size: 1em;/*Aqui definimos o tamanho padrão para a fonte. Nesse caso vamos usar o 'em' por ser uma medida relativa, ou seja, ele vai adaptar o tamanho da letra ao dispositivo automaticamente.*/
+}
+
+@font-face{
+	font-family: 'Open-sans-light';
+	src: url("../fonts/OpenSans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+
+@font-face{
+	font-family: 'Open-sans-bold';
+	src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
+	font-size: 1em;
+}
+
+/*Cabeçalho*/
+
+header{
+	width: 100%;
+	height: 150px;
+	background-color: rgba(94, 41, 154, .8);
+	z-index: 2;/*Utilizamos o z-index para definir a prioridade sobre qual elemento deve ficar na frente de outro, em questão de profundidade*/
+	position: relative;
+}
+
+header .container{/*Aqui vamos configurar informações que são comuns a todas as classes containers contidas no header*/
+	position: relative;	
+}
+
+header .header-black{/*Aqui vamos configurar a parte do cabeçalho que vai conter a lista de times*/
+	background-color: #000;
+	height: 40px;
+}
+
+header .header-black .row{
+	float: right;/*Esse comando serve para empurrar todos os elementos nessa classe row para a direita*/
+}
+
+header .header-black li{/*Aqui vamos configurar uma informação comum a todos os li que estão no cabeçalho, nesse caso será a imagem com todos os escudos dos times. Depois vamos alterar cada um individualmente.*/
+	background-image: url("../images/clubs.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 2px 3px;
+}
+
+header .header-black li.club-01{/*Aqui não separamos o club01 do li, pois o club01 está dentro do li e não é filho dele.*/
+	background-position: 0px 0px;
+}
+header .header-black li.club-02{
+	background-position: -48px 0px;
+}
+header .header-black li.club-03{
+	background-position: -94px 0px;
+}
+header .header-black li.club-04{
+	background-position: -139px 0px;
+}
+header .header-black li.club-05{
+	background-position: -189px 0px;
+}
+header .header-black li.club-06{
+	background-position: -239px 0px;
+}
+header .header-black li.club-07{
+	background-position: -288px 0px;
+}
+header .header-black li.club-08{
+	background-position: -335px 0px;
+}
+header .header-black li.club-09{
+	background-position: -379px 0px;
+}
+header .header-black li.club-10{
+	background-position: -428px 0px;
+}
+header .header-black li.club-11{
+	background-position: -479px 0px;
+}
+header .header-black li.club-12{
+	background-position: -528px 0px;
+}
+header .header-black li.club-13{
+	background-position: -578px 0px;
+}
+header .header-black li.club-14{
+	background-position: -628px 0px;
+}
+header .header-black li.club-15{
+	background-position: -674px 0px;
+}
+header .header-black li.club-16{
+	background-position: -718px 0px;
+}
+header .header-black li.club-17{
+	background-position: -761px 0px;
+}
+header .header-black li.club-18{
+	background-position: -806px 0px;
+}
+header .header-black li.club-19{
+	background-position: -855px 0px;
+}
+header .header-black li.club-20{
+	background-position: -948px 0px;
+}
+header .header-black li.club-21{
+	background-position: -997px 0px;
+}
+
+header .header-black li a{/*Aqui vamos configurar todos os elementos com a tag a dentro do cabeçalho, vamos fazer todos terem o tamanho dos logos dos times*/
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
+header #logotipo{/*Aqui vamos configurar o logotipo, note que se formos fazer referência uma classe usamos (.), mas se fizermos referência a um id usamos (#)*/
+	position: absolute;
+	top: -20px;
+}
+
+#menu{/*Como ids são únicos podemos fazer referências a eles diretamente*/
+	float: right;
+	margin-top: -6px;
+}
+
+#menu li{
+	display: inline-block;
+	padding: 24px;
+	font-family: "Open-sans-regular";
+}
+
+#menu li a{
+	color: #FFF;
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu li.search input{
+	background-color: #5C2D90;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+}
+
+#menu li.search .form-control::placeholder{
+	color: rgba(255, 255, 255, .5);
+}
+
+#menu li.search button{
+	border: none;
+	background: none;
+	color: rgba(255,255,255,.5);/*O rgba é usado para definir a cor que queremos, mas também altera a transparência(varia de 0 a 1)*/
+}
+
+
+/*Meio da página*/
+
+#banner{
+	width: 100%;
+	height: 728px;
+	position: relative;
+	background-image: url("../images/banner.jpg");
+	top: -110px;
+	background-position: 0px -100px;
+	background-repeat: no-repeat;
+}
+
+#banner h1{
+	font-family: 'Open-sans-light';
+	padding-top: 300px;
+	font-size: 92px;
+	color: #FFF;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);/*Aqui vamos determinar a sombra que o texto deve ter. Sendo sombra a direita, sombra inferior, tamanho da sombra e cor da sombra*/
+	margin-left: 25px;
+}
+
+#banner h1 small{
+	font-size: 32px;
+	display: block;
+}
+
+#news{
+	position: relative;
+	top: -100px;
+}
+
+#news h2{
+	color: #5E2799;
+	font-family: 'Open-sans-light';
+	font-size: 48px;
+	text-transform: uppercase;/*Aqui vamos fazer com que o texto de h2 seja maiúsculo, independente de como esteja escrito no arquivo html.*/
+	text-align: center;/*Aqui vamos fazer com que o texto seja alinhado no meio da página*/
+}
+
+#news hr{
+	border: #FBC531 solid 5px;
+	width: 200px;
+	margin: 0 auto;/*Ao utilizarmos esses valores para margin, queremos dizer que não terá margem em cima e embaixo, mas a margem dos lados será automatica ao tamanho que temos.*/
+}
+
+#news .thumbnails{
+	margin-top: 20px;
+}
+
+#news .thumbnails h3{
+	font-family: 'Open-sans-bold';
+	font-size: 18px;
+	color: #5E299A;
+	margin-bottom: 0;
+}
+
+#news .thumbnails time{
+	color: #A7A7A7;
+	font-family: 'Open-sans-regular';
+	font-size: 18px;
+}
+
+#estatistica{
+	background-color: #5E299A;
+	width: 100%;
+	height: 200px;
+}
+
+#estatistica p{
+	color: #FDE092;
+	text-transform: uppercase;
+	font-family: 'Open-sans-regular';
+	font-size: 64px;
+	text-align: center;
+	margin-top: 29px;
+}
+
+#estatistica p small{
+	color: #FFF;
+	text-transform: uppercase;
+	font-family: 'Open-sans-light';
+	font-size: 24px;
+	display: block;
+}
+
+#call-to-action{
+	text-align: center;
+	margin-top: 100px;
+}
+
+#call-to-action h2{
+	color: #5E2799;
+	font-family: 'Open-sans-light';
+	font-size: 48px;
+	text-align: center;
+}
+
+#call-to-action hr{
+	border: #FBC531 solid 5px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#call-to-action p{
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: #656565;
+	font-family: 'Open-sans-regular';
+}
+
+#call-to-action .row-max-400{
+	margin: 0 auto;
+	max-width: 400px;/*Aqui vamos estabelecer o tamanho máximo que pode haver nessa classe, ou seja, tudo o que estiver dentro dessa classe deve ocupar no máximo 400px.*/
+}
+
+#call-to-action .btn-roxo{
+	color: #fff;
+	background-color: #5E299A;
+	border-color: #5E299A;
+	min-width: 164px;
+	height: 44px;
+	border-radius: 0;
+	line-height: 30px;
+}
+
+#call-to-action .btn-amarelo{
+	color: #000;
+	background-color: #fde192;
+	border-color: #fde192;
+	min-width: 164px;
+	height: 44px;
+	border-radius: 0;
+	line-height: 30px;
+}
+
+/*Rodapé*/
+
+footer{
+	margin-top: 110px;
+	width: 100%;
+}
+
+footer .row-cinza-claro{
+	height: 200px;
+	background-color: #171F26;
+}
+
+footer .row-cinza-escuro{
+	height: 60px;
+	background-color: #11171D;
+	border-top: #242D37 1px solid;/*Aqui vamos colocar uma borda nessa estrutura apenas na parte de cima, para criar uma linha de divisão entre as rows*/
+}
+
+footer p{
+	display: inline;
+}
+
+footer p.texto-cinza{
+	top: 15px;
+	position: relative;
+	left: 33px;
+	font-family: 'Open-sans-regular';
+	font-size: 14px;
+	color: #666;
+}
+
+footer p.texto-roxo{
+	float: right;
+	top: 15px;
+	position: relative;
+	right: 33px;
+	font-family: 'Open-sans-bold';
+	font-size: 14px;
+	color: #5E299A;
+}
+
+footer .logotipo{
+	margin-top: 26px;
+}
+
+footer .col-popular-post{
+	color: #fff;
+}
+
+footer h5{
+	
+}

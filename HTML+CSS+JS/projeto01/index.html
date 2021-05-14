@@ -4,9 +4,230 @@
 	<meta charset="utf-8">
 	<title>Orlando City</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/orlando.css">
 </head>
 <body>
 
+	<header>
+
+		<div class="header-black">
+			<div class="container">
+				<div class="row">
+					<ul><!--A tag ul serve para criar uma lista de itens, nesse caso uma lista com os escudos do time.-->
+						<li class="club-01"><a href="#"></a></li><!--A tag li serve para armazenar e ordenar os elementos dentro da lista criada pela tag ul. A tag a vai servir para que o tamanho da área que queremos manipular seja igual ao tamanho dos escudos que queremos apresentar.-->
+						<li class="club-02"><a href="#"></a></li>
+						<li class="club-03"><a href="#"></a></li>
+						<li class="club-04"><a href="#"></a></li>
+						<li class="club-05"><a href="#"></a></li>
+						<li class="club-06"><a href="#"></a></li>
+						<li class="club-07"><a href="#"></a></li>
+						<li class="club-08"><a href="#"></a></li>
+						<li class="club-09"><a href="#"></a></li>
+						<li class="club-10"><a href="#"></a></li>
+						<li class="club-11"><a href="#"></a></li>
+						<li class="club-12"><a href="#"></a></li>
+						<li class="club-13"><a href="#"></a></li>
+						<li class="club-14"><a href="#"></a></li>
+						<li class="club-15"><a href="#"></a></li>
+						<li class="club-16"><a href="#"></a></li>
+						<li class="club-17"><a href="#"></a></li>
+						<li class="club-18"><a href="#"></a></li>
+						<li class="club-19"><a href="#"></a></li>
+						<li class="club-20"><a href="#"></a></li>
+						<li class="club-21"><a href="#"></a></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row" id="menu">
+				<nav>
+					<ul>
+						<li><a href="#">Tickets</a></li><!--Usaremos a tag a para indicar que podemos clickar nesse elemento e que podemos ser direcionados a outro local, caso a tag a faça referência a outra página.-->
+						<li><a href="#">News</a></li>
+						<li><a href="#">Schedule</a></li>
+						<li class="search">
+							<div class="input-group mb-3">
+						  		<input type="text" class="form-control" placeholder="Search...">
+						  		<button type="button" id="button-addon2"><i class="fas fa-search"></i></button><!--A tag i serve para trazer um ícone, adiciona um ícone a página. Pegar a classe certa no fontawesome-->
+							</div>
+						</li>
+					</ul>
+				</nav>				
+			</div>			
+		</div>
+		
+		<div class="container"><!--Cria um container para ajudar na configuração de elementos na página-->
+			<div class="row"><!--A classe row cria uma linha na página, onde vamos poder colocar certos elementos que queremos e como usamos a linha fica melhor de ajustar a posição desse elemento.-->
+
+			</div>
+		</div>
+
+		<div class="container">
+			<img id="logotipo" src="images/orlando-logo.png" alt="Logotipo"><!--A tag img é utilizada para inserir imagens na nossa página web. O atributo src serve para indicar onde está a imagem. O atributo alt serve para indicar o que deve ser exibido caso a imagem não seja carregada.-->
+		</div>
+
+	</header>
+
+	<section>
+
+		<div id="banner">
+			<h1>Orlando City<small>Orlando City Soccer Club</small></h1><!--A tag h1 insere o texto principal que queremos. E utilizamos a tag small para insirir um texto que vai ser menor que o h1, mas que está vinculado a ele.-->
+		</div>
+
+		<div id="news" class="container">
+			
+			<div class="row">
+				<h2>Latest News</h2><!--Vamos utilizar o h2, pois o h1 já foi utilizado nesse espaço e como ele representa o título ele só pode se utilizado uma vez.-->
+				<hr><!--Essa tag hr insere uma linha horizontal na página.-->
+			</div>
+
+			<div class="row thumbnails">
+				<!--O bootstrap divide a tela do navegador em 12 colunas e nos podemos manipular o espaço utilizado para cada elemento utilizando uma composição dessas 12 colunas.
+					Para a div news vamos querer 3 colunas, gerando assim 4 divs do estilo col-md-3-->
+				<div class="col-md-3">
+					<img src="images/noticia-thumb.jpg" alt="Noticia">
+					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+					<time>December 21, 2015</time>
+				</div>
+
+				<div class="col-md-3">
+					<img src="images/noticia-thumb.jpg" alt="Noticia">
+					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+					<time>December 21, 2015</time>
+				</div>
+
+				<div class="col-md-3">
+					<img src="images/noticia-thumb.jpg" alt="Noticia">
+					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+					<time>December 21, 2015</time>
+				</div>
+
+				<div class="col-md-3">
+					<img src="images/noticia-thumb.jpg" alt="Noticia">
+					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+					<time>December 21, 2015</time>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="estatistica">
+			
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-4">
+						<p>61348<small>Stadium Capacity</small></p><!--A tag p tem a funcionalidade de adicionar um parágrafo à nossa página.-->
+					</div>
+
+					<div class="col-md-4">
+						<p>2010<small>Hound</small></p>
+					</div>
+
+					<div class="col-md-4">
+						<p>7th<small>Eastern Conference</small></p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="call-to-action">
+			
+			<div class="container">
+
+				<div class="row text-center">
+					
+					<div class="row">
+						<h2>American club number one in Brazil</h2>
+						<hr>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.</p>
+				</div>
+
+				<div class="row row-max-400">
+					
+					<div class="col-md-6">
+						<a href="#" class="btn btn-roxo">Shop</a>
+					</div>
+
+					<div class="col-md-6">
+						<a href="#" class="btn btn-amarelo">Register</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer>
+		
+		<div class="row row-cinza-claro"><!--Colocamos a classe como sendo 'row row-cinza-claro' para que o primeiro row indique a qual classe pertence essa tag e o resto é para nomear a classe, para facilitar na hora de alterar no css-->
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-2 text-center">
+						<img class="logotipo" src="images/orlando-logo.png" alt="Logotipo">
+					</div>
+
+					<div class="col-md-10">
+						
+						<div class="col-md-4 col-popular-post">
+							<h4>POPULAR POSTS</h4>
+							<ul>
+								<li>
+									<h5>Neque porro quisquam est, quister.</h5> 
+									<time>January 01, 2016</time>
+								</li>
+								<li>
+									<h5>Neque porro quisquam est, quister.</h5> 
+									<time>January 01, 2016</time>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4 col-links">
+							
+						</div>
+
+						<div class="col-md-4 col-get-in-touch">
+							
+						</div>
+
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row row-cinza-escuro">
+			<div class="container">
+				<p class="texto-cinza">Copyright c Orlando City Soccer 2016. All rights reserved.</p>
+				<p class="texto-roxo">Create by Bruno</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="https://kit.fontawesome.com/c7fe2fec28.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
