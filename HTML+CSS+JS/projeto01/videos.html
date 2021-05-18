@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Orlando City</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/orlando.css">
+</head>
+<body>
+
+	<header>
+
+		<div class="header-black">
+			<div class="container">
+				<div class="row">
+					<ul><!--A tag ul serve para criar uma lista de itens, nesse caso uma lista com os escudos do time.-->
+						<li class="club-01"><a href="#"></a></li><!--A tag li serve para armazenar e ordenar os elementos dentro da lista criada pela tag ul. A tag a é uma tag para enviar a outra página, se ela faz referência a #, então ela retorna a página que está.-->
+						<li class="club-02"><a href="#"></a></li>
+						<li class="club-03"><a href="#"></a></li>
+						<li class="club-04"><a href="#"></a></li>
+						<li class="club-05"><a href="#"></a></li>
+						<li class="club-06"><a href="#"></a></li>
+						<li class="club-07"><a href="#"></a></li>
+						<li class="club-08"><a href="#"></a></li>
+						<li class="club-09"><a href="#"></a></li>
+						<li class="club-10"><a href="#"></a></li>
+						<li class="club-11"><a href="#"></a></li>
+						<li class="club-12"><a href="#"></a></li>
+						<li class="club-13"><a href="#"></a></li>
+						<li class="club-14"><a href="#"></a></li>
+						<li class="club-15"><a href="#"></a></li>
+						<li class="club-16"><a href="#"></a></li>
+						<li class="club-17"><a href="#"></a></li>
+						<li class="club-18"><a href="#"></a></li>
+						<li class="club-19"><a href="#"></a></li>
+						<li class="club-20"><a href="#"></a></li>
+						<li class="club-21"><a href="#"></a></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row" id="menu">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="videos.html">Videos</a></li>
+						<li><a href="#">Tickets</a></li><!--Usaremos a tag a para indicar que podemos clickar nesse elemento e que podemos ser direcionados a outro local, caso a tag a faça referência a outra página.-->
+						<li><a href="#">News</a></li>
+						<li><a href="#">Schedule</a></li>
+						<li class="search">
+							<div class="input-group mb-3">
+						  		<input type="text" class="form-control" placeholder="Search..." id="input-search">
+						  		<button type="button" id="button-addon2"><i class="fas fa-search"></i></button><!--A tag i serve para trazer um ícone, adiciona um ícone a página. Pegar a classe certa no fontawesome-->
+							</div>
+						</li>
+					</ul>
+				</nav>				
+			</div>			
+		</div>
+		
+		<div class="container"><!--Cria um container para ajudar na configuração de elementos na página-->
+			<div class="row"><!--A classe row cria uma linha na página, onde vamos poder colocar certos elementos que queremos e como usamos a linha fica melhor de ajustar a posição desse elemento.-->
+
+			</div>
+		</div>
+
+		<div class="container">
+			<img id="logotipo" src="images/orlando-logo.png" alt="Logotipo"><!--A tag img é utilizada para inserir imagens na nossa página web. O atributo src serve para indicar onde está a imagem. O atributo alt serve para indicar o que deve ser exibido caso a imagem não seja carregada.-->
+		</div>
+
+	</header>
+
+	<section>
+
+		<div id="call-to-action">
+			
+			<div class="container">
+
+				<div class="row text-center">
+					
+					<div class="row">
+						<h2>Videos</h2>
+						<hr>
+					</div>
+
+				</div>
+
+				<div class="row">
+					
+					<video src="mp4/highlights.mp4" controls poster="images/highlights.jpg"></video>
+					<!--A tag video adiciona um vídeo a página. O atributo autoplay faz com que o vídeo inicie sozinho quando a página acabar de carregar. O atributo controls permite que o usuário controle o vídeo. O atributo poster define uma imagem ou frame específico para ser exibido enquanto o vídeo não começa.-->
+
+					<!--
+					<audio src="mp3/audio.mp3" controls></audio>
+					A tag audio será igual a tag video, mas ao inves de incluir um vídeo insere um aúdio. Não vai deixar iniciar, pois não há aúdio
+					-->
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="news" class="container">
+		
+			<div class="row">
+				<h2>Latest News</h2><!--Vamos utilizar o h2, pois o h1 já foi utilizado nesse espaço e como ele representa o título ele só pode se utilizado uma vez.-->
+				<hr><!--Essa tag hr insere uma linha horizontal na página.-->
+			</div>
+
+			<div class="row thumbnails owl-carousel owl-theme">
+				<!--O bootstrap divide a tela do navegador em 12 colunas e nos podemos manipular o espaço utilizado para cada elemento utilizando uma composição dessas 12 colunas.
+					Para a div news vamos querer 3 colunas, gerando assim 4 divs do estilo col-md-3-->
+				<div class="item" data-video="highlights.mp4"><!--O atributo data serve para indicar que deve se guardar um arquivo neste local, ou seja, vincula um arquivo a essa tag. A parte do '-video' é o nome que temos a esse atributo-->
+					<div class="item-inner">
+						<img src="images/highlights.jpg" alt="Noticia">
+						<h3>Highlights</h3>
+					</div>
+				</div>
+
+				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+					<div class="item-inner">
+						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+						<h3>Orlando City Foundation 2015</h3>
+					</div>
+				</div>
+
+				<div class="item" data-video="highlights.mp4">
+					<div class="item-inner">
+						<img src="images/highlights.jpg" alt="Noticia">
+						<h3>Highlights</h3>
+					</div>
+				</div>
+
+				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+					<div class="item-inner">
+						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+						<h3>Orlando City Foundation 2015</h3>
+					</div>
+				</div>
+
+				<div class="item" data-video="highlights.mp4">
+					<div class="item-inner">
+						<img src="images/highlights.jpg" alt="Noticia">
+						<h3>Highlights</h3>
+					</div>
+				</div>
+
+				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+					<div class="item-inner">
+						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+						<h3>Orlando City Foundation 2015</h3>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer>
+		
+		<div class="row row-cinza-claro"><!--Colocamos a classe como sendo 'row row-cinza-claro' para que o primeiro row indique a qual classe pertence essa tag e o resto é para nomear a classe, para facilitar na hora de alterar no css-->
+			<div class="container">
+				
+				<div class="row">
+
+					<div class="col-md-2 text-center">
+						<img class="logotipo" src="images/orlando-logo.png" alt="Logotipo">
+					</div>
+
+					<div class="col-md-10">
+						
+						<div class="row row-col">
+
+							<div class="col-md-4 col-popular-post">
+								<h4>POPULAR POSTS</h4>
+								<ul class="list-unstyled"><!--A classe list-unstyled remove qualquer tipo de estilo que a tag ul já possa ter.-->
+									<li>
+										<h5>Neque porro quisquam est, quister.</h5> 
+										<time>January 01, 2016</time>
+									</li>
+									<li>
+										<h5>Neque porro quisquam est, quister.</h5> 
+										<time>January 01, 2016</time>
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-md-4 col-links">
+								<h4>LINKS</h4>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#"><i class="fas fa-angle-right">Tickets</i></a>										
+									</li>
+									<li>
+										<a href="#"><i class="fas fa-angle-right">News</i></a>										
+									</li>
+									<li>
+										<a href="#"><i class="fas fa-angle-right">Schedule</i></a>										
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-md-4 col-get-in-touch">
+							
+								<h4>GET IN TOUCH</h4>
+								
+								<address>
+									<i class="fas fa-map-marker-alt"></i><span>618 E. South Street, Suite 510<br>Orlando, FL 32801</span><!--A tag span serve para quando quisermos formatar um texto. A tag br serve para fazer uma quebra de linha no ponto determinado, pula uma linha.-->
+								</address>
+
+								<p><a href="tel: 1855ORLCITY"><i class="fas fa-phone-alt"></i> 1.855.ORL.CITY</a></p>
+
+								<ul class="list-unstyled list-sociais">
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-pinterest-p"></i>
+										</a>
+									</li>
+								</ul>
+									
+							</div>
+								
+
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row row-cinza-escuro">
+			<div class="container">
+				<p class="texto-cinza">Copyright c Orlando City Soccer 2016. All rights reserved.</p>
+				<p class="texto-roxo">Create by Bruno</p>
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="https://kit.fontawesome.com/c7fe2fec28.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="OwlCarousel/dist/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	
+	<!--Aqui vamos criar comandos do tipo jQuery-->
+	<script>//Primeiro abrimos uma tag script para armazenar os comandos
+		$(document).ready(function() {//Essa linha de comando serve para indicar que o programa deve executar a função(function) somente quando a página(document) acabar de carregar, estiver pronta(.ready).
+			/*$("#logotipo").on("mouseover", function() {//Nesta linha nos estamos dizendo que o programa deve executar a função quando passarmos o mouse(mouseover) por cima do logotipo. Como o logotipo tem identificação do tipo id utilizamos o #.
+				console.log("Passou o mouse no logotipo!");
+			});
+			$("#logotipo").on("mouseover", function() {
+				$("#banner h1").css({"color":"red", "font-size": "12em", "transition":"1s"})//Neste comando vamos alterar propriedades do css do h1 que está no id="banner" quando passarmos o mouse no logotipo. Para alterar apenas uma propriedade usamos somente o (), mas para alterar mais de uma temos que colocar {} dentro dos () e listar quais propriedades serão alteradas e para quais valores. A propriedade transition serve para mostrar a transformação que ocorre, demorando o tempo que determinamos.
+			});
+			*/
+			$("#logotipo").on("mouseover", function() {
+				$("#banner h1").addClass("efeito");//Nesse comando vamos adicionar uma classe que vai afetar o h1 e que vai ser executada ao passarmos o mouse no logotipo. No caso alterar o seu css(classe efeito está no arquivo css).
+			}).on("mouseout", function() {//Podemos adicionar mais de uma condição a um elemento, para isso basta fazermos como nessa linha. Aqui vamos indicar o que deve acontecer quando o mouse sair de cima do logotipo.
+				$("#banner h1").removeClass("efeito");
+			});
+
+			$("#input-search").on("focus", function() {
+				$("li.search").addClass("ativo");
+			}).on("blur", function() {//O blur seria o contrário do focus, quando o elemento não estiver mais selecionado
+				$("li.search").removeClass("ativo");
+			});
+
+			$(".thumbnails").owlCarousel({//Aqui vamos configurar como o carrossel deve se comportar
+				loop: true,//Aqui vamos dizer que ele deve passar no loop automaticamente
+				nav: true,//Vamos adicionar uma navegação, para o usuário controlar o carrossel
+				navText: ["Anterior", "Próximo"],//Aqui vamos indicar o texto que deve estar associado a navegação
+				margin: 10,
+				responsive: {//Aqui vamos declarar quantas imagens devem aparecer no carrossel dependendo do tamanho da tela
+					0:{
+						items: 1
+					},
+					480: {
+						items: 2
+					}, 
+					768: {
+						items: 4
+					},
+					1200: {
+						items: 5
+					},
+				}
+			})
+		});
+	</script>
+</body>
+</html>

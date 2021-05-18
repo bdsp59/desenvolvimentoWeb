@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>Orlando City</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/orlando.css">
 </head>
 <body>
@@ -14,7 +16,7 @@
 			<div class="container">
 				<div class="row">
 					<ul><!--A tag ul serve para criar uma lista de itens, nesse caso uma lista com os escudos do time.-->
-						<li class="club-01"><a href="#"></a></li><!--A tag li serve para armazenar e ordenar os elementos dentro da lista criada pela tag ul. A tag a vai servir para que o tamanho da área que queremos manipular seja igual ao tamanho dos escudos que queremos apresentar.-->
+						<li class="club-01"><a href="#"></a></li><!--A tag li serve para armazenar e ordenar os elementos dentro da lista criada pela tag ul. A tag a é uma tag para enviar a outra página, se ela faz referência a #, então ela retorna a página que está.-->
 						<li class="club-02"><a href="#"></a></li>
 						<li class="club-03"><a href="#"></a></li>
 						<li class="club-04"><a href="#"></a></li>
@@ -44,12 +46,14 @@
 			<div class="row" id="menu">
 				<nav>
 					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="videos.html">Videos</a></li>
 						<li><a href="#">Tickets</a></li><!--Usaremos a tag a para indicar que podemos clickar nesse elemento e que podemos ser direcionados a outro local, caso a tag a faça referência a outra página.-->
 						<li><a href="#">News</a></li>
 						<li><a href="#">Schedule</a></li>
 						<li class="search">
 							<div class="input-group mb-3">
-						  		<input type="text" class="form-control" placeholder="Search...">
+						  		<input type="text" class="form-control" placeholder="Search..." id="input-search">
 						  		<button type="button" id="button-addon2"><i class="fas fa-search"></i></button><!--A tag i serve para trazer um ícone, adiciona um ícone a página. Pegar a classe certa no fontawesome-->
 							</div>
 						</li>
@@ -83,31 +87,71 @@
 				<hr><!--Essa tag hr insere uma linha horizontal na página.-->
 			</div>
 
-			<div class="row thumbnails">
+			<div class="row thumbnails owl-carousel owl-theme">
 				<!--O bootstrap divide a tela do navegador em 12 colunas e nos podemos manipular o espaço utilizado para cada elemento utilizando uma composição dessas 12 colunas.
 					Para a div news vamos querer 3 colunas, gerando assim 4 divs do estilo col-md-3-->
-				<div class="col-md-3">
-					<img src="images/noticia-thumb.jpg" alt="Noticia">
-					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-					<time>December 21, 2015</time>
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
 				</div>
 
-				<div class="col-md-3">
-					<img src="images/noticia-thumb.jpg" alt="Noticia">
-					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-					<time>December 21, 2015</time>
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
 				</div>
 
-				<div class="col-md-3">
-					<img src="images/noticia-thumb.jpg" alt="Noticia">
-					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-					<time>December 21, 2015</time>
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
 				</div>
 
-				<div class="col-md-3">
-					<img src="images/noticia-thumb.jpg" alt="Noticia">
-					<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-					<time>December 21, 2015</time>
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="item-inner">
+						<img src="images/noticia-thumb.jpg" alt="Noticia">
+						<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+						<time>December 21, 2015</time>
+					</div>
 				</div>
 
 			</div>
@@ -189,26 +233,75 @@
 
 					<div class="col-md-10">
 						
-						<div class="col-md-4 col-popular-post">
-							<h4>POPULAR POSTS</h4>
-							<ul>
-								<li>
-									<h5>Neque porro quisquam est, quister.</h5> 
-									<time>January 01, 2016</time>
-								</li>
-								<li>
-									<h5>Neque porro quisquam est, quister.</h5> 
-									<time>January 01, 2016</time>
-								</li>
-							</ul>
-						</div>
+						<div class="row row-col">
 
-						<div class="col-md-4 col-links">
-							
-						</div>
+							<div class="col-md-4 col-popular-post">
+								<h4>POPULAR POSTS</h4>
+								<ul class="list-unstyled"><!--A classe list-unstyled remove qualquer tipo de estilo que a tag ul já possa ter.-->
+									<li>
+										<h5>Neque porro quisquam est, quister.</h5> 
+										<time>January 01, 2016</time>
+									</li>
+									<li>
+										<h5>Neque porro quisquam est, quister.</h5> 
+										<time>January 01, 2016</time>
+									</li>
+								</ul>
+							</div>
 
-						<div class="col-md-4 col-get-in-touch">
+							<div class="col-md-4 col-links">
+								<h4>LINKS</h4>
+								<ul class="list-unstyled">
+									<li>
+										<a href="#"><i class="fas fa-angle-right">Tickets</i></a>										
+									</li>
+									<li>
+										<a href="#"><i class="fas fa-angle-right">News</i></a>										
+									</li>
+									<li>
+										<a href="#"><i class="fas fa-angle-right">Schedule</i></a>										
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-md-4 col-get-in-touch">
 							
+								<h4>GET IN TOUCH</h4>
+								
+								<address>
+									<i class="fas fa-map-marker-alt"></i><span>618 E. South Street, Suite 510<br>Orlando, FL 32801</span><!--A tag span serve para quando quisermos formatar um texto. A tag br serve para fazer uma quebra de linha no ponto determinado, pula uma linha.-->
+								</address>
+
+								<p><a href="tel: 1855ORLCITY"><i class="fas fa-phone-alt"></i> 1.855.ORL.CITY</a></p>
+
+								<ul class="list-unstyled list-sociais">
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-instagram"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fab fa-pinterest-p"></i>
+										</a>
+									</li>
+								</ul>
+									
+							</div>
+								
+
+							</div>
+
 						</div>
 
 					</div>
@@ -229,6 +322,52 @@
 
 	<script src="https://kit.fontawesome.com/c7fe2fec28.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="OwlCarousel/dist/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	
+	<!--Aqui vamos criar comandos do tipo jQuery-->
+	<script>//Primeiro abrimos uma tag script para armazenar os comandos
+		$(document).ready(function() {//Essa linha de comando serve para indicar que o programa deve executar a função(function) somente quando a página(document) acabar de carregar, estiver pronta(.ready).
+			/*$("#logotipo").on("mouseover", function() {//Nesta linha nos estamos dizendo que o programa deve executar a função quando passarmos o mouse(mouseover) por cima do logotipo. Como o logotipo tem identificação do tipo id utilizamos o #.
+				console.log("Passou o mouse no logotipo!");
+			});
+			$("#logotipo").on("mouseover", function() {
+				$("#banner h1").css({"color":"red", "font-size": "12em", "transition":"1s"})//Neste comando vamos alterar propriedades do css do h1 que está no id="banner" quando passarmos o mouse no logotipo. Para alterar apenas uma propriedade usamos somente o (), mas para alterar mais de uma temos que colocar {} dentro dos () e listar quais propriedades serão alteradas e para quais valores. A propriedade transition serve para mostrar a transformação que ocorre, demorando o tempo que determinamos.
+			});
+			*/
+			$("#logotipo").on("mouseover", function() {
+				$("#banner h1").addClass("efeito");//Nesse comando vamos adicionar uma classe que vai afetar o h1 e que vai ser executada ao passarmos o mouse no logotipo. No caso alterar o seu css(classe efeito está no arquivo css).
+			}).on("mouseout", function() {//Podemos adicionar mais de uma condição a um elemento, para isso basta fazermos como nessa linha. Aqui vamos indicar o que deve acontecer quando o mouse sair de cima do logotipo.
+				$("#banner h1").removeClass("efeito");
+			});
+
+			$("#input-search").on("focus", function() {
+				$("li.search").addClass("ativo");
+			}).on("blur", function() {//O blur seria o contrário do focus, quando o elemento não estiver mais selecionado
+				$("li.search").removeClass("ativo");
+			});
+
+			$(".thumbnails").owlCarousel({//Aqui vamos configurar como o carrossel deve se comportar
+				loop: true,//Aqui vamos dizer que ele deve passar no loop automaticamente
+				nav: true,//Vamos adicionar uma navegação, para o usuário controlar o carrossel
+				navText: ["Anterior", "Próximo"],//Aqui vamos indicar o texto que deve estar associado a navegação
+				margin: 10,
+				responsive: {//Aqui vamos declarar quantas imagens devem aparecer no carrossel dependendo do tamanho da tela
+					0:{
+						items: 1
+					},
+					480: {
+						items: 2
+					}, 
+					768: {
+						items: 4
+					},
+					1200: {
+						items: 5
+					},
+				}
+			})
+		});
+	</script>
 </body>
 </html>

@@ -132,6 +132,16 @@ header #logotipo{/*Aqui vamos configurar o logotipo, note que se formos fazer re
 	font-family: "Open-sans-regular";
 }
 
+#menu li.search{
+	width: 182px;
+	transition-timing-function: cubic-bezier(1, -.91, .91, 1);
+	transition-duration: 1s;
+}
+
+#menu li.search.ativo{
+	width: 300px;
+}
+
 #menu li a{
 	color: #FFF;
 	font-size: 16px;
@@ -144,6 +154,10 @@ header #logotipo{/*Aqui vamos configurar o logotipo, note que se formos fazer re
 	border: none;
 	height: 30px;
 	line-height: 30px;
+}
+
+#menu li.search.ativo input{
+	width: 300px;
 }
 
 #menu li.search .form-control::placeholder{
@@ -176,6 +190,12 @@ header #logotipo{/*Aqui vamos configurar o logotipo, note que se formos fazer re
 	color: #FFF;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);/*Aqui vamos determinar a sombra que o texto deve ter. Sendo sombra a direita, sombra inferior, tamanho da sombra e cor da sombra*/
 	margin-left: 25px;
+	transition: 1s;/*Vamos colocar o transition aqui para que o efeito de transição apareça em qualquer alteração qeu o h1 sofra*/
+}
+
+#banner h1.efeito{/*Aqui vamos configurar o que deve acontecer quando o logotipo receber a classe efeito*/
+	color: red;
+	font-size: 12em;
 }
 
 #banner h1 small{
@@ -217,6 +237,14 @@ header #logotipo{/*Aqui vamos configurar o logotipo, note que se formos fazer re
 	color: #A7A7A7;
 	font-family: 'Open-sans-regular';
 	font-size: 18px;
+}
+
+#news .thumbnails .item-inner{
+	padding: 10px;
+}
+
+#news .thumbnails .item-inner{
+	width: 100%;
 }
 
 #estatistica{
@@ -337,10 +365,83 @@ footer .logotipo{
 	margin-top: 26px;
 }
 
-footer .col-popular-post{
-	color: #fff;
+footer .col-popular-post, .col-links, .col-get-in-touch{
+	margin-top: 40px;
 }
 
-footer h5{
-	
+footer .row-col h4{
+	color: #fff;
+	font-family: 'Open-sans-regular';
+	font-size: 16px;
+	padding-bottom: 17px;
+	border-bottom: #242d37 1px solid;
+}
+
+footer .row-col h5{
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+footer .row-col time{
+	color: #FDE092;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+footer .col-links a,
+footer .col-get-in-touch a{
+	color: #FFF;
+	font-family: Arial;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+footer .col-get-in-touch address{
+	color: #666;
+	font-family: Arial;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+footer .col-get-in-touch address span{
+	display: inline-block;
+}
+
+footer .col-get-in-touch i{
+	color: #9B9B9B;
+	font-size: 20px;
+	margin: 0px 4px;
+}
+
+footer .col-get-in-touch address i{
+	position: relative;
+	top: -12px;
+}
+
+footer .col-get-in-touch p{
+	line-height: 33px;
+}
+
+footer .list-sociais{
+	margin-top: 4px;
+}
+
+footer .list-sociais li{
+	display: inline-block;
+}
+
+footer .list-sociais a{
+	display: block;
+	border: #9B9B9B 1px solid;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 14px;
+	text-align: center;
+}
+
+footer .list-sociais i{
+	font-size: 16px;
+	margin: 5px auto;
 }
