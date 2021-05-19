@@ -2,11 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width:device-width, initial-scale = 1">
 	<title>Orlando City</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="plyr/src/sass/plyr.scss"><!--scss é uma extensão do css, mas faz as mesmas coisas-->
 	<link rel="stylesheet" type="text/css" href="css/orlando.css">
+	<link rel="stylesheet" type="text/css" href="css/orlando-mobile.css">
 </head>
 <body>
 
@@ -90,14 +93,25 @@
 				</div>
 
 				<div class="row">
-					
-					<video src="mp4/highlights.mp4" controls poster="images/highlights.jpg"></video>
-					<!--A tag video adiciona um vídeo a página. O atributo autoplay faz com que o vídeo inicie sozinho quando a página acabar de carregar. O atributo controls permite que o usuário controle o vídeo. O atributo poster define uma imagem ou frame específico para ser exibido enquanto o vídeo não começa.-->
-
 					<!--
+					Aqui são os comandos da aula
+					<video src="mp4/highlights.mp4" controls poster="images/highlights.jpg"></video>
+					A tag video adiciona um vídeo a página. O atributo autoplay faz com que o vídeo inicie sozinho quando a página acabar de carregar. O atributo controls permite que o usuário controle o vídeo. O atributo poster define uma imagem ou frame específico para ser exibido enquanto o vídeo não começa.
+
 					<audio src="mp3/audio.mp3" controls></audio>
 					A tag audio será igual a tag video, mas ao inves de incluir um vídeo insere um aúdio. Não vai deixar iniciar, pois não há aúdio
+					Aqui estão os comandos atuais:
 					-->
+
+					<video id="player" playsinline controls data-poster="images/highlights.jpg">
+						<source src="mp4/highlights.mp4" type="video/mp4">
+
+						<track kind="captions" label="Português (Brasil)" src="vtt/legendas.vtt" srclang="pt-br" default />
+					</video>
+
+					<input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+					<button type="button" id="btn-play-pause" class="btn btn-success">PLAY</button>
 
 				</div>
 
@@ -105,7 +119,7 @@
 
 		</div>
 
-		<div id="news" class="container">
+		<div id="news" class="container" style="top: 0"><!--Aqui vamos usar o atributo style para sobrescrever o css desse atributo. O atributo style permite colocar elementos do css diretamente por aqui.-->
 		
 			<div class="row">
 				<h2>Latest News</h2><!--Vamos utilizar o h2, pois o h1 já foi utilizado nesse espaço e como ele representa o título ele só pode se utilizado uma vez.-->
@@ -115,42 +129,42 @@
 			<div class="row thumbnails owl-carousel owl-theme">
 				<!--O bootstrap divide a tela do navegador em 12 colunas e nos podemos manipular o espaço utilizado para cada elemento utilizando uma composição dessas 12 colunas.
 					Para a div news vamos querer 3 colunas, gerando assim 4 divs do estilo col-md-3-->
-				<div class="item" data-video="highlights.mp4"><!--O atributo data serve para indicar que deve se guardar um arquivo neste local, ou seja, vincula um arquivo a essa tag. A parte do '-video' é o nome que temos a esse atributo-->
+				<div class="item" data-video="highlights"><!--O atributo data serve para indicar que deve se guardar um arquivo neste local, ou seja, vincula um arquivo a essa tag. A parte do '-video' é o nome que temos a esse atributo-->
 					<div class="item-inner">
 						<img src="images/highlights.jpg" alt="Noticia">
 						<h3>Highlights</h3>
 					</div>
 				</div>
 
-				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+				<div class="item" data-video="Orlando_City_Foundation_2015">
 					<div class="item-inner">
 						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
 						<h3>Orlando City Foundation 2015</h3>
 					</div>
 				</div>
 
-				<div class="item" data-video="highlights.mp4">
+				<div class="item" data-video="highlights">
 					<div class="item-inner">
 						<img src="images/highlights.jpg" alt="Noticia">
 						<h3>Highlights</h3>
 					</div>
 				</div>
 
-				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+				<div class="item" data-video="Orlando_City_Foundation_2015">
 					<div class="item-inner">
 						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
 						<h3>Orlando City Foundation 2015</h3>
 					</div>
 				</div>
 
-				<div class="item" data-video="highlights.mp4">
+				<div class="item" data-video="highlights">
 					<div class="item-inner">
 						<img src="images/highlights.jpg" alt="Noticia">
 						<h3>Highlights</h3>
 					</div>
 				</div>
 
-				<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+				<div class="item" data-video="Orlando_City_Foundation_2015">
 					<div class="item-inner">
 						<img src="images/Orlando_City_Foundation_2015.jpg" alt="Noticia">
 						<h3>Orlando City Foundation 2015</h3>
@@ -267,49 +281,43 @@
 	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="OwlCarousel/dist/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-	
-	<!--Aqui vamos criar comandos do tipo jQuery-->
-	<script>//Primeiro abrimos uma tag script para armazenar os comandos
-		$(document).ready(function() {//Essa linha de comando serve para indicar que o programa deve executar a função(function) somente quando a página(document) acabar de carregar, estiver pronta(.ready).
-			/*$("#logotipo").on("mouseover", function() {//Nesta linha nos estamos dizendo que o programa deve executar a função quando passarmos o mouse(mouseover) por cima do logotipo. Como o logotipo tem identificação do tipo id utilizamos o #.
-				console.log("Passou o mouse no logotipo!");
-			});
-			$("#logotipo").on("mouseover", function() {
-				$("#banner h1").css({"color":"red", "font-size": "12em", "transition":"1s"})//Neste comando vamos alterar propriedades do css do h1 que está no id="banner" quando passarmos o mouse no logotipo. Para alterar apenas uma propriedade usamos somente o (), mas para alterar mais de uma temos que colocar {} dentro dos () e listar quais propriedades serão alteradas e para quais valores. A propriedade transition serve para mostrar a transformação que ocorre, demorando o tempo que determinamos.
-			});
-			*/
-			$("#logotipo").on("mouseover", function() {
-				$("#banner h1").addClass("efeito");//Nesse comando vamos adicionar uma classe que vai afetar o h1 e que vai ser executada ao passarmos o mouse no logotipo. No caso alterar o seu css(classe efeito está no arquivo css).
-			}).on("mouseout", function() {//Podemos adicionar mais de uma condição a um elemento, para isso basta fazermos como nessa linha. Aqui vamos indicar o que deve acontecer quando o mouse sair de cima do logotipo.
-				$("#banner h1").removeClass("efeito");
+
+	<!--Configurando o plyr-->
+	<script src="plyr/src/js/plyr.js">
+		const player = new Plyr("#player");//Devemos inserir essa parte dentro da configuração do javascript
+	</script>
+
+	<script src="js/efeitos.js"></script>
+	<script>
+
+		$(function() {//Forma abreviada de se colocar o jQuery
+
+			$(".thumbnails .item").on("click", function() {
+				//console.log($(this).data('video'));O this faz referência ao elemento que verificamos se for o click. Nessa linha vamos procurar um elemento que seja um data, vai procurar pelo data- com o nome que está no parênteses.
+				$("video").attr({
+					"src": "mp4/"+$(this).data('video')+".mp4",
+					"poster": "images/"+$(this).data('video')+".jpg"
+				});
 			});
 
-			$("#input-search").on("focus", function() {
-				$("li.search").addClass("ativo");
-			}).on("blur", function() {//O blur seria o contrário do focus, quando o elemento não estiver mais selecionado
-				$("li.search").removeClass("ativo");
+			$("#volume").on("mousemove", function() {//Quando alterar a propriedade do volume
+				$("video")[0].volume = parseFloat($(this).val());//Nesta linha vamos fazer com que a propriedade volume do vídeo seja igual ao valor está armazenado nessa barra volume.
 			});
 
-			$(".thumbnails").owlCarousel({//Aqui vamos configurar como o carrossel deve se comportar
-				loop: true,//Aqui vamos dizer que ele deve passar no loop automaticamente
-				nav: true,//Vamos adicionar uma navegação, para o usuário controlar o carrossel
-				navText: ["Anterior", "Próximo"],//Aqui vamos indicar o texto que deve estar associado a navegação
-				margin: 10,
-				responsive: {//Aqui vamos declarar quantas imagens devem aparecer no carrossel dependendo do tamanho da tela
-					0:{
-						items: 1
-					},
-					480: {
-						items: 2
-					}, 
-					768: {
-						items: 4
-					},
-					1200: {
-						items: 5
-					},
+			$("#btn-play-pause").on("click", function() {
+				$(this).toggleClass("btn-success btn-danger");//Essa função permite adicionar, remover ou trocar uma classe. Nesse caso, ele vai verificar qual está ativa e vai trocar pela outra opção.
+				var video = $("video")[0];//Aqui vamos criar uma variável para armazenar as informações sobre o vídeo e podermos controlar o vídeo.
+
+				if($(this).hasClass("btn-success")){
+					$(this).text("PLAY");
+					video.pause();
+				}else{
+					$(this).text("STOP");
+					video.play();
 				}
-			})
+			});
+
+			//console.dir($("video")[0]); => Esse comando traz todos os dados que podem ser manipulados pelo css e todas as funções que podem ser manipuladas pelo javascript.
 		});
 	</script>
 </body>

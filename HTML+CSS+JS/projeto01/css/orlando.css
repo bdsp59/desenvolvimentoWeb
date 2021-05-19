@@ -30,6 +30,10 @@ header .container{/*Aqui vamos configurar informações que são comuns a todas 
 	position: relative;	
 }
 
+#btn-bars, #btn-search{/*Temos que esconder os botões para que não apareçam quando for uma tela de computador*/
+	display: none;
+}
+
 header .header-black{/*Aqui vamos configurar a parte do cabeçalho que vai conter a lista de times*/
 	background-color: #000;
 	height: 40px;
@@ -444,4 +448,14 @@ footer .list-sociais a{
 footer .list-sociais i{
 	font-size: 16px;
 	margin: 5px auto;
+}
+
+#call-to-action video{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#btn-play-pause{
+	width: 20%;
+	margin: 0 auto;
 }

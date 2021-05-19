@@ -1,0 +1,75 @@
+/*Tamanho padrão para tablets
+No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela e se o tamanho máximo dela é de 768px. Se for, vamos aplicar as configurações que estão dentro das chaves.
+*/
+@media only screen and (max-width: 768px) {
+	.header-black ul{
+		display: none;
+	}
+}
+
+/*Tamanho padrão para celulares*/
+@media only screen and (max-width: 480px) {
+	.header-black ul, #menu{
+		display: none;
+	}
+
+	#logotipo{
+		left: 32%;
+	}
+
+	#btn-bars, #btn-search{
+		display: block; /*Precisamos colocar esse display para que os botões apareçam*/
+		color: #fff;
+		font-size: 22px;
+		position: absolute;
+		top: 5px;
+		background: none;
+		border: none;
+	}
+
+	#btn-bars{
+		left: 5px;
+	}
+
+	#btn-search{
+		right: 5px;
+	}
+
+	#banner{
+		height: 317px;
+		background-size: cover;
+		background-position: 0;
+		text-align: center;
+	}
+
+	#banner h1{
+		padding-top: 142px;
+		font-size: 48px;
+	}
+
+	#banner h1 small{
+		font-size: 22px;
+	}
+
+	#news h2{
+		font-size: 32px;
+	}
+
+	#news hr{
+		border-width: 4px;
+	}
+
+	.owl-carousel .owl-wrapper-outer{
+		margin-left: 15px;
+	}
+
+	.thumbnails{
+		text-align: center;
+	}
+
+	.owl-carousel .owl-item img {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+}

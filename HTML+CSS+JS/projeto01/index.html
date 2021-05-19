@@ -2,19 +2,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width:device-width, initial-scale = 1"><!--Aqui vamos configurar o viewport, que é o que vai fazer a nossa página html ser responsiva, ou seja, trabalhar em telas de dispositivos móveis. O content serve para colocar as informações que deverão ser alteradas dependendo do dispositivo. O width com esse valor faz o tamanho de tela seja pego automaticamente. O initial-scale serve para indicar com quanto de zoom a tela deve iniciar(no caso com 2x). O user-scalable determina se o usuário pode ou não dar zoom na tela.-->
 	<title>Orlando City</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" type="text/css" href="css/orlando.css">
+	<link rel="stylesheet" type="text/css" href="css/orlando-mobile.css">
 </head>
 <body>
 
 	<header>
 
 		<div class="header-black">
+
 			<div class="container">
+
+				<!--Os dois botões a seguir serão para serem usados no momento que a página for acessada no mobile-->
+				<button id="btn-bars" type="button" id="button-addon2"><i class="fas fa-bars"></i></button><!---->
+				<button id="btn-search" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+				
 				<div class="row">
+
 					<ul><!--A tag ul serve para criar uma lista de itens, nesse caso uma lista com os escudos do time.-->
 						<li class="club-01"><a href="#"></a></li><!--A tag li serve para armazenar e ordenar os elementos dentro da lista criada pela tag ul. A tag a é uma tag para enviar a outra página, se ela faz referência a #, então ela retorna a página que está.-->
 						<li class="club-02"><a href="#"></a></li>
@@ -326,48 +335,6 @@
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 	
 	<!--Aqui vamos criar comandos do tipo jQuery-->
-	<script>//Primeiro abrimos uma tag script para armazenar os comandos
-		$(document).ready(function() {//Essa linha de comando serve para indicar que o programa deve executar a função(function) somente quando a página(document) acabar de carregar, estiver pronta(.ready).
-			/*$("#logotipo").on("mouseover", function() {//Nesta linha nos estamos dizendo que o programa deve executar a função quando passarmos o mouse(mouseover) por cima do logotipo. Como o logotipo tem identificação do tipo id utilizamos o #.
-				console.log("Passou o mouse no logotipo!");
-			});
-			$("#logotipo").on("mouseover", function() {
-				$("#banner h1").css({"color":"red", "font-size": "12em", "transition":"1s"})//Neste comando vamos alterar propriedades do css do h1 que está no id="banner" quando passarmos o mouse no logotipo. Para alterar apenas uma propriedade usamos somente o (), mas para alterar mais de uma temos que colocar {} dentro dos () e listar quais propriedades serão alteradas e para quais valores. A propriedade transition serve para mostrar a transformação que ocorre, demorando o tempo que determinamos.
-			});
-			*/
-			$("#logotipo").on("mouseover", function() {
-				$("#banner h1").addClass("efeito");//Nesse comando vamos adicionar uma classe que vai afetar o h1 e que vai ser executada ao passarmos o mouse no logotipo. No caso alterar o seu css(classe efeito está no arquivo css).
-			}).on("mouseout", function() {//Podemos adicionar mais de uma condição a um elemento, para isso basta fazermos como nessa linha. Aqui vamos indicar o que deve acontecer quando o mouse sair de cima do logotipo.
-				$("#banner h1").removeClass("efeito");
-			});
-
-			$("#input-search").on("focus", function() {
-				$("li.search").addClass("ativo");
-			}).on("blur", function() {//O blur seria o contrário do focus, quando o elemento não estiver mais selecionado
-				$("li.search").removeClass("ativo");
-			});
-
-			$(".thumbnails").owlCarousel({//Aqui vamos configurar como o carrossel deve se comportar
-				loop: true,//Aqui vamos dizer que ele deve passar no loop automaticamente
-				nav: true,//Vamos adicionar uma navegação, para o usuário controlar o carrossel
-				navText: ["Anterior", "Próximo"],//Aqui vamos indicar o texto que deve estar associado a navegação
-				margin: 10,
-				responsive: {//Aqui vamos declarar quantas imagens devem aparecer no carrossel dependendo do tamanho da tela
-					0:{
-						items: 1
-					},
-					480: {
-						items: 2
-					}, 
-					768: {
-						items: 4
-					},
-					1200: {
-						items: 5
-					},
-				}
-			})
-		});
-	</script>
+	<script src="js/efeitos.js"></script>
 </body>
 </html>
