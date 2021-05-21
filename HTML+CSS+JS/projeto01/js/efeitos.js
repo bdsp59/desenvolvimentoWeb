@@ -37,5 +37,20 @@ $(document).ready(function() {//Essa linha de comando serve para indicar que o p
 				items: 5
 			},
 		}
-	})
+	});
+
+	var owl = $('.owl-carousel');//Configurando as setas para passar para a notícia anterior ou posterior
+	owl.owlCarousel();
+
+	$("#btn-news-prev").on("click", function() {
+
+		owl.trigger('prev.owl.carousel');
+
+	});
+
+	$("#btn-news-next").on("click", function() {
+
+		owl.trigger('next.owl.carousel');
+
+	});
 });

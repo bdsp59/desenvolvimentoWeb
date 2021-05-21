@@ -30,7 +30,8 @@ header .container{/*Aqui vamos configurar informações que são comuns a todas 
 	position: relative;	
 }
 
-#btn-bars, #btn-search{/*Temos que esconder os botões para que não apareçam quando for uma tela de computador*/
+#btn-bars, #btn-search,
+#btn-news-prev, #btn-news-next{/*Temos que esconder os botões para que não apareçam quando for uma tela de computador*/
 	display: none;
 }
 
