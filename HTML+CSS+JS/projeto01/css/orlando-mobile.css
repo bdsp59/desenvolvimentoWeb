@@ -110,11 +110,11 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 	}
 
 	#call-to-action p{
-		margin: 40px 15px;
+		margin: 40px 6px;
 	}
 
 	#call-to-action h2{
-		margin-left: 15px;
+		margin-left: 10px;
 		margin-right: 15px;
 	}
 
@@ -130,5 +130,75 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 
 	#call-to-action .btn-amarelo{
 		float: right;
+	}
+
+	footer{
+		margin-top: 60px;
+		position: relative;
+	}
+
+	.row{
+		margin: 0;
+	}
+
+	footer .copyright-mobile p{
+		font-size: 11px;
+		line-height: 0;
+		text-align: center;
+		top: 8px;
+	}
+
+	footer .texto-roxo{
+		margin-top: 8px;
+	}
+
+	footer .row-cinza-claro{
+		height: 157px;
+	}
+
+	footer ul{
+		position: absolute;
+		top: 89px;
+	}
+
+	footer .list-sociais{
+		top: 75px;
+	}
+
+	footer .col-md-10{
+		padding: 0;
+	}
+
+	footer .list-sociais li{
+		margin: 4px;
+	}
+
+	footer .list-sociais a{
+		height: 52px;
+		width: 52px;
+		border-radius: 50%;
+	}
+
+	footer .list-sociais i{
+		font-size: 33px;
+		margin-top: 8px;
+	}
+
+	footer .row-fluid{
+		display: flex;
+	}
+
+	footer .btn-footer{
+		width: 100%;
+		background-color: #11171D;
+	}
+
+	footer .col-xs-6{
+		margin: -12px 31px;
+	}
+
+	footer .col-xs-6 a{
+		display: flex;
+		font-size: 18px;
 	}
 }

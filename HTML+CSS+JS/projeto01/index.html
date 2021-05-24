@@ -240,7 +240,7 @@
 				
 				<div class="row">
 
-					<div class="col-md-2 text-center">
+					<div class="col-md-2 text-center d-none d-md-block"><!--Adicionamos a classe as funções d-none e d-md-block, para que o site esconda o que está nessa div quando estiver usando um dispositivo mobile.-->
 						<img class="logotipo" src="images/orlando-logo.png" alt="Logotipo">
 					</div>
 
@@ -248,7 +248,7 @@
 						
 						<div class="row row-col">
 
-							<div class="col-md-4 col-popular-post">
+							<div class="col-md-4 col-popular-post d-none d-md-block">
 								<h4>POPULAR POSTS</h4>
 								<ul class="list-unstyled"><!--A classe list-unstyled remove qualquer tipo de estilo que a tag ul já possa ter.-->
 									<li>
@@ -262,7 +262,7 @@
 								</ul>
 							</div>
 
-							<div class="col-md-4 col-links">
+							<div class="col-md-4 col-links d-none d-md-block">
 								<h4>LINKS</h4>
 								<ul class="list-unstyled">
 									<li>
@@ -279,13 +279,22 @@
 
 							<div class="col-md-4 col-get-in-touch">
 							
-								<h4>GET IN TOUCH</h4>
+								<h4 class="d-none d-md-block">GET IN TOUCH</h4>
 								
-								<address>
+								<address class="d-none d-md-block">
 									<i class="fas fa-map-marker-alt"></i><span>618 E. South Street, Suite 510<br>Orlando, FL 32801</span><!--A tag span serve para quando quisermos formatar um texto. A tag br serve para fazer uma quebra de linha no ponto determinado, pula uma linha.-->
 								</address>
 
-								<p><a href="tel: 1855ORLCITY"><i class="fas fa-phone-alt"></i> 1.855.ORL.CITY</a></p>
+								<p class="d-none d-md-block"><a href="tel: 1855ORLCITY"><i class="fas fa-phone-alt"></i> 1.855.ORL.CITY</a></p>
+
+								<div class="row-fluid d-sm-none"><!--Utilizamos a classe d-sm-none para esconder esse botão em telas que são maiores que sm(small)-->
+									<div class="col-xs-6">
+										<a href="#" class="btn btn-footer"><i class="fas fa-map-marker-alt"></i>Location</a>
+									</div>
+									<div class="col-xs-6">
+										<a href="#" class="btn btn-footer"><i class="fas fa-phone-alt"></i>Call</a>
+									</div>
+								</div>
 
 								<ul class="list-unstyled list-sociais">
 									<li>
@@ -308,24 +317,27 @@
 											<i class="fab fa-pinterest-p"></i>
 										</a>
 									</li>
+									<li>
+										<a href="#" target="_blank">
+											<i class="fas fa-chevron-up"></i>
+										</a>
+									</li>
 								</ul>
 									
-							</div>
-								
-
 							</div>
 
 						</div>
 
 					</div>
-					
-				</div>
 
+				</div>
+					
 			</div>
+
 		</div>
 
 		<div class="row row-cinza-escuro">
-			<div class="container">
+			<div class="container copyright-mobile">
 				<p class="texto-cinza">Copyright c Orlando City Soccer 2016. All rights reserved.</p>
 				<p class="texto-roxo">Create by Bruno</p>
 			</div>
