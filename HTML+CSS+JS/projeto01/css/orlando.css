@@ -332,8 +332,13 @@ footer{
 	width: 100%;
 }
 
+footer .row{
+	margin-left: 0;
+	width: 100%;
+}
+
 footer .row-cinza-claro{
-	height: 200px;
+	height: 240px;
 	background-color: #171F26;
 }
 

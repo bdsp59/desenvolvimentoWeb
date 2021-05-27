@@ -12,7 +12,11 @@
 </head>
 <body>
 
-	<header>
+	<header class="open-menu"><!--Vamos ter a classe de como será o header quando o menu estiver aberto e quando o menu estiver fechado. Ambos configurados no css para mobile-->
+
+		<div id="menu-mobile" class="d-sm-none"><!--Aqui vamos criar como vai ficar o menu quando estiver no dispositivo mobile.-->
+			
+		</div>
 
 		<div class="header-black">
 
@@ -317,8 +321,8 @@
 											<i class="fab fa-pinterest-p"></i>
 										</a>
 									</li>
-									<li>
-										<a href="#" target="_blank">
+									<li class="d-sm-none">
+										<a href="#" id="page-up">
 											<i class="fas fa-chevron-up"></i>
 										</a>
 									</li>

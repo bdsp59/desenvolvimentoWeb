@@ -9,12 +9,20 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 
 /*Tamanho padrão para celulares*/
 @media only screen and (max-width: 480px) {
+	header .header-black{
+		position: fixed;/*Com este comando dizemos que queremos que essa estrutura seja fixa na posição que está. Mas perdemos o tamanho da largura, então temos que dizer de novo o seu tamanho.*/
+		top: 0;
+		width: 100%;
+	}
+
 	.header-black ul, #menu{
 		display: none;
 	}
 
-	#logotipo{
+	header #logotipo{
 		left: 32%;
+		position: absolute;
+		top: 1px;
 	}
 
 	#btn-bars, #btn-search{
@@ -200,5 +208,9 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 	footer .col-xs-6 a{
 		display: flex;
 		font-size: 18px;
+	}
+
+	header.open-menu{
+		
 	}
 }

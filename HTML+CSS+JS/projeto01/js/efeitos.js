@@ -53,4 +53,18 @@ $(document).ready(function() {//Essa linha de comando serve para indicar que o p
 		owl.trigger('next.owl.carousel');
 
 	});
+
+	$("#page-up").on("click", function(event){//Aqui vamos programar o botão que retorna ao topo da página. Temos como paramêtro esse event, pois como é uma tag a, temos que evitar que o evento de a ocorrá.
+
+
+		$("body").animate({//A classe animate serve para dizer que deve haver um efeito para subir, não deve apenas aparecer no topo.
+
+			scrollTop: 0//A função scroll top serve para enviar a página a algum lugar no topo, como queremos o começo da página enviamos ao pixel zero.
+	
+		}, 1000);//Para o animate temos que determinar o tempo que queremos que demore para realizar a ação, em milisegundos.
+
+		event.preventDefault();//Aqui removemos a função natural de evento.
+
+	});
+
 });
