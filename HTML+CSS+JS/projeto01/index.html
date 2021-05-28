@@ -12,10 +12,25 @@
 </head>
 <body>
 
-	<header class="open-menu"><!--Vamos ter a classe de como será o header quando o menu estiver aberto e quando o menu estiver fechado. Ambos configurados no css para mobile-->
+	<header><!--class="open-menu" => Vamos ter a classe de como será o header quando o menu estiver aberto e quando o menu estiver fechado. Ambos configurados no css para mobile.-->
+
+		<div id="menu-mobile-mask" class="d-sm-none"><!--Aqui vamos criar a máscara para a tela quando o menu estiver aberto-->
+			
+		</div>
 
 		<div id="menu-mobile" class="d-sm-none"><!--Aqui vamos criar como vai ficar o menu quando estiver no dispositivo mobile.-->
 			
+			<ul class="list-unstyled">
+				<li><a href="videos.html">Videos</a></li>
+				<li><a href="#">Tickets</a></li><!--Usaremos a tag a para indicar que podemos clickar nesse elemento e que podemos ser direcionados a outro local, caso a tag a faça referência a outra página.-->
+				<li><a href="#">News</a></li>
+				<li><a href="#">Schedule</a></li>
+			</ul>
+
+			<div class="bar-close">
+				<button type="button" class="btn btn-close"><i class="fas fa-times"></i></button>
+			</div>
+
 		</div>
 
 		<div class="header-black">

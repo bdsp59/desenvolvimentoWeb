@@ -67,4 +67,10 @@ $(document).ready(function() {//Essa linha de comando serve para indicar que o p
 
 	});
 
+	$("#btn-bars").on("click", function(){
+
+		$("header").toggleClass("open-menu");//O toggleClass adiciona ou remove uma classe ao elemento.
+
+	});
+
 });

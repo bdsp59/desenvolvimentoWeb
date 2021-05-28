@@ -13,6 +13,7 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		position: fixed;/*Com este comando dizemos que queremos que essa estrutura seja fixa na posição que está. Mas perdemos o tamanho da largura, então temos que dizer de novo o seu tamanho.*/
 		top: 0;
 		width: 100%;
+
 	}
 
 	.header-black ul, #menu{
@@ -23,6 +24,8 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		left: 32%;
 		position: absolute;
 		top: 1px;
+		z-index: 6;
+		transition: 1s;
 	}
 
 	#btn-bars, #btn-search{
@@ -87,7 +90,7 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		font-size: 48px;
 		display: block;
 		position: absolute;
-		z-index: 4;
+		z-index: 1;
 	}
 
 	#btn-news-prev{
@@ -210,7 +213,73 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		font-size: 18px;
 	}
 
-	header.open-menu{
-		
+	header #menu-mobile{/*Quando estivermos usando o menu em um dispositivo mobile vamos ter que ter esse formato.*/
+		position: fixed;
+		top: 40px;
+		background-color: #FFF;
+		width: 80%;
+		height: 100%;
+		left: -80%;
+		transition: 1s;
+		z-index: 5;/*Temos que colocar o z-index como 5 para que ele fique por cima da máscara*/
+	}
+
+	header.open-menu #menu-mobile{
+		left: 0;
+	}
+
+	header.open-menu #menu-mobile-mask{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+	}
+
+	header.open-menu #logotipo{/*Aqui vamos alterar o logotipo quando estivermos com o menu aberto*/
+		position: fixed;
+		top: 50px;
+		height: 76px;
+		left: calc(41% - 33px);/*A função calc realiza a conta em seu interior antes de aplicar a propriedade*/
+	}
+
+	header.open-menu #menu-mobile ul{
+		margin: 20px;
+		margin-top: 102px;
+	}
+
+	header.open-menu #menu-mobile li{
+		text-align: center;
+		border-top: #CCCCCC 1px solid;/*Vamos adicionar uma borda para separar os elementos*/
+	}
+
+	header.open-menu #menu-mobile li:last-child{
+		border-bottom: #CCCCCC 1px solid;
+	}
+
+	header.open-menu #menu-mobile li a{
+		color: #633392;
+		font-family: 'Open-sans-regular';
+		font-size: 16px;
+		font-weight: bold;
+		padding: 18px;
+		display: block;
+		text-decoration: none;
+	}
+
+	header.open-menu .bar-close{
+		position: absolute;
+		bottom: 120px;
+		background-color: #633492;
+		height: 40px;
+		width: 100%;
+	}
+
+	header.open-menu .bar-close .btn-close{
+		background: none;
+		border: none;
+		color: #FFF;
+		font-size: 22px;
 	}
 }
