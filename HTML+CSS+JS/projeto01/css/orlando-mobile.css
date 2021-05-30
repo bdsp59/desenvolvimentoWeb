@@ -23,9 +23,13 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 	header #logotipo{
 		left: 32%;
 		position: absolute;
-		top: 1px;
+		top: 22px;
 		z-index: 6;
 		transition: 1s;
+	}
+
+	header.open-menu #logotipo{
+		transform: rotate(360deg);/*Aqui vamos adicionar um efeito para rodar o logotipo*/
 	}
 
 	#btn-bars, #btn-search{
@@ -244,6 +248,45 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		left: calc(41% - 33px);/*A função calc realiza a conta em seu interior antes de aplicar a propriedade*/
 	}
 
+	header #menu-mobile ul{
+		margin: 20px;
+		margin-top: 102px;
+	}
+
+	header #menu-mobile li{
+		text-align: center;
+		border-top: #CCCCCC 1px solid;/*Vamos adicionar uma borda para separar os elementos*/
+	}
+
+	header #menu-mobile li:last-child{
+		border-bottom: #CCCCCC 1px solid;
+	}
+
+	header #menu-mobile li a{
+		color: #633392;
+		font-family: 'Open-sans-regular';
+		font-size: 16px;
+		font-weight: bold;
+		padding: 18px;
+		display: block;
+		text-decoration: none;
+	}
+
+	header .bar-close{
+		position: absolute;
+		bottom: 40px;
+		background-color: #633492;
+		height: 40px;
+		width: 100%;
+	}
+
+	header .bar-close .btn-close{
+		background: none;
+		border: none;
+		color: #FFF;
+		font-size: 22px;
+	}
+
 	header.open-menu #menu-mobile ul{
 		margin: 20px;
 		margin-top: 102px;
@@ -270,7 +313,7 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 
 	header.open-menu .bar-close{
 		position: absolute;
-		bottom: 120px;
+		bottom: 40px;
 		background-color: #633492;
 		height: 40px;
 		width: 100%;
@@ -281,5 +324,30 @@ No comando abaixo vamos verificar se a mídia que faz a requisição é uma tela
 		border: none;
 		color: #FFF;
 		font-size: 22px;
+	}
+
+	header #input-search-mobile{
+		transition: 1s;
+		top: -40px;
+		position: fixed;
+		width: 70%;
+		left: 18%;
+		background-color: #000;
+		border: none;
+		height: 40px;
+		color: #FFF;
+		outline: 0;/*Remove a borda de seleção que aparece quando clica, como se destaca*/
+	}
+
+	header.open-search #input-search-mobile{
+		top: 0;
+	}
+
+	header.open-search #logotipo{
+		z-index: -1;
+	}
+
+	header.open-menu.open-search #logotipo{
+		z-index: 5;
 	}
 }

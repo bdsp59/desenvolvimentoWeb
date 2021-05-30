@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<header><!--class="open-menu" => Vamos ter a classe de como será o header quando o menu estiver aberto e quando o menu estiver fechado. Ambos configurados no css para mobile.-->
+	<header><!--class="open-menu" => Vamos ter a classe de como será o header quando o menu estiver aberto e quando o menu estiver fechado. Ambos configurados no css para mobile. class="open-search" => Vamos ter uma classe que abre o menu de busca quando estamos no mobile-->
 
 		<div id="menu-mobile-mask" class="d-sm-none"><!--Aqui vamos criar a máscara para a tela quando o menu estiver aberto-->
 			
@@ -36,6 +36,8 @@
 		<div class="header-black">
 
 			<div class="container">
+
+				<input type="input" id="input-search-mobile" class="d-sm-none" placeholder="search..."><!--Aqui vamos criar a barra de busca que deve aparecer quando o usuário quiser buscar algo quando estiver usando um dispositivo móvel-->
 
 				<!--Os dois botões a seguir serão para serem usados no momento que a página for acessada no mobile-->
 				<button id="btn-bars" type="button" id="button-addon2"><i class="fas fa-bars"></i></button><!---->

@@ -73,4 +73,18 @@ $(document).ready(function() {//Essa linha de comando serve para indicar que o p
 
 	});
 
+	$("#menu-mobile-mask, .btn-close").on("click", function() {//Podemos declarar a mesma função a mais de um elemento somente separando os elementos por ',' antes de indicar em qual momento ativar a função
+
+		$("header").removeClass("open-menu");
+
+	});
+
+	$("#btn-search").on("click", function(){
+
+		$("header").toggleClass("open-search");
+
+		$("#input-search-mobile").focus();
+
+	});
+
 });
